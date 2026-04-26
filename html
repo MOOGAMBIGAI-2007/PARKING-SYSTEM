@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Parking Login</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 100px;
+        }
+        input {
+            padding: 10px;
+            margin: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            background: green;
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Watchman Login</h2>
+
+    <input type="text" id="username" placeholder="Username"><br>
+    <input type="password" id="password" placeholder="Password"><br>
+    <button onclick="login()">Login</button>
+
+    <script>
+        function login() {
+            let user = document.getElementById("username").value;
+            let pass = document.getElementById("password").value;
+
+            if(user === "admin" && pass === "1234") {
+                window.location.href = "dashboard.html";
+            } else {
+                alert("Invalid Login!");
+            }
+        }
+    </script>
+
+</body>
+</html>
